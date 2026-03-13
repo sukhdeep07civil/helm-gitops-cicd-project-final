@@ -1,5 +1,5 @@
 apiVersion: argocd.io/v1aplha1
-kind: Deployment
+kind: Application
 metadata:
   name: auth-service
   namespace: argocd
