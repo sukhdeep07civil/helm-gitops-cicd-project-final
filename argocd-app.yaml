@@ -1,0 +1,21 @@
+apiVersion: argocd.io/v1aplha1
+kind: Deployment
+metadata:
+  name: auth-service
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/sukhdeep07civil/helm-gitops-cicd-project-final.git
+    targetRevision: HEAD
+    path: auth-service
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
