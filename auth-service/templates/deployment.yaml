@@ -22,4 +22,4 @@ spec:
               value: {{ .Values.redis.host }}
 
             - name: REDIS_PORT
-              values: {{ .Values.redis.port }}
+              value: "{{ .Values.redis.port }}"
